@@ -5,7 +5,7 @@ metadata:
   labels:
     app.kubernetes.io/name: wordpress
 spec:
-  host: tho.ocp.lan
+  host: blog.nguyenductho.pro
   path: "/"
   to:
     kind: Service
