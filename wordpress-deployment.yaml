@@ -18,7 +18,7 @@ spec:
         tier: frontend
     spec:
       containers:
-      - image: default-route-openshift-image-registry.apps.labdc.ocp.lan/wordpress/wordpress8080
+      - image: image-registry.openshift-image-registry.svc:5000/wordpress/wordpress8080
         name: wordpress
         env:
         - name: WORDPRESS_DB_HOST
@@ -37,7 +37,7 @@ spec:
         - name: wordpress-persistent-storage
           mountPath: /var/www/html  
       imagePullSecrets:
-        - name: image-registry-secret  
+        - name: image-registry-secret # Use the secret here    
       volumes:
       - name: wordpress-persistent-storage
         persistentVolumeClaim:
