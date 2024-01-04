@@ -36,7 +36,7 @@ spec:
         volumeMounts:
         - name: wordpress-persistent-storage
           mountPath: /var/www/html  
-      imagePullSecrets:
+        imagePullSecrets:
         - name: image-registry-secret
       volumes:
       - name: wordpress-persistent-storage
