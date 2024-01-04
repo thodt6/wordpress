@@ -18,7 +18,7 @@ spec:
         tier: frontend
     spec:
       containers:
-      - image: docker.ecolandvn.com/wordpress8080:latest
+      - image: image-registry.openshift-image-registry.svc:5000/wordpress/wordpress8080
         name: wordpress
         env:
         - name: WORDPRESS_DB_HOST
